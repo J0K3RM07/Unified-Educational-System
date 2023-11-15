@@ -1,6 +1,0 @@
-{
-    "Nikita": { "name": "Никита", "course": "Курс 1", "check": "25/30", "complete": "20/30"},
-    "Eugene": { "name": "Евгений", "course": "Курс 2", "check": "30/30", "complete": "30/30"},
-    "Alex": { "name": "Алексей", "course": "Курс 3", "check": "15/30", "complete": "10/30"},
-    "Alexander": { "name": "Александр", "course": "Курс 5", "check": "15/30", "complete": "20/30"}
-}
