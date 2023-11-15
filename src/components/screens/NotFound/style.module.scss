@@ -1,0 +1,19 @@
+.container {
+    min-height: 100vh;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+
+    background-color: #eee;
+}
+
+.heading {
+    text-align: center;
+    width: 500px;
+}
+
+.link {
+    margin-top: 20px;
+}

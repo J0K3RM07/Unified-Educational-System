@@ -1,0 +1,9 @@
+{
+    "lectures": [
+        { "id": 1, "name": "Курс 1", "text": "Материал курса 1", "date": "08.09.23", "img": "https://devby.io/storage/images/19/29/88/35/derived/9793b77c2e9f469a84c6e243e1d23936.jpg", "link": "#"},
+        { "id": 2, "name": "Курс 2", "text": "Материал курса 2", "date": "08.09.23", "img": "https://devby.io/storage/images/19/29/88/35/derived/9793b77c2e9f469a84c6e243e1d23936.jpg", "link": "#"},
+        { "id": 3, "name": "Курс 3", "text": "Материал курса 3", "date": "08.09.23", "img": "https://devby.io/storage/images/19/29/88/35/derived/9793b77c2e9f469a84c6e243e1d23936.jpg", "link": "#"},
+        { "id": 4, "name": "Курс 4", "text": "Материал курса 4", "date": "08.09.23", "img": "https://devby.io/storage/images/19/29/88/35/derived/9793b77c2e9f469a84c6e243e1d23936.jpg", "link": "#"},
+        { "id": 5, "name": "Курс 5", "text": "Материал курса 5", "date": "08.09.23", "img": "https://devby.io/storage/images/19/29/88/35/derived/9793b77c2e9f469a84c6e243e1d23936.jpg", "link": "#"}
+    ]
+}

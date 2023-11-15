@@ -1,0 +1,33 @@
+.progress {
+    min-height: 50vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.leftBox {
+    width: 530px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.text {
+    margin-bottom: 10px;
+
+    color: #2B788B;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+}

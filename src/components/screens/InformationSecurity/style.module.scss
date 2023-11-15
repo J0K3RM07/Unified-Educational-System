@@ -1,0 +1,27 @@
+.security {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: calc(100vh - 190px);
+    background-color: #F6F5F4;
+    box-shadow: 0 0 0 100vmax #F6F5F4;
+    clip-path: inset(0 -100vmax);
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.img {
+    width: 600px;
+    height: 800px;
+}
+
+.linkBack {
+    margin-top: 20px;
+}
