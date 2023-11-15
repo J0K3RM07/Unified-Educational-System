@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.id , .experience {
+    width: 70px;
+}
+
+
+.name, .nameBoss {
+    width: 280px;
+}
+
+.subdivision, .job {
+    width: 160px;
+}
+
+.jobTitle {
+    width: 100px;
+}
+
+.status {
+    width: 100px;
+}

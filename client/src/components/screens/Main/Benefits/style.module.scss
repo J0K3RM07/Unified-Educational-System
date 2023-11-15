@@ -1,0 +1,39 @@
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    background-color: #F6F5F4;
+    box-shadow: 0 0 0 100vmax #F6F5F4;
+    clip-path: inset(0 -100vmax);
+
+    display: flex;
+    justify-content: center;
+}
+
+.ul {
+    margin-top: 40px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.li {
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.decr {
+    text-align: center;
+}
+
+.img {
+    width: 400px;
+    height: 400px;
+}
