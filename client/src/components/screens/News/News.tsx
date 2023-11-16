@@ -4,10 +4,10 @@ import { format } from "date-fns";
 
 import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
-import Heading from "../../shared/Heading/Heading";
+import Heading from "../../UI/Heading/Heading";
 import style from "./style.module.scss";
-import Subtitle from "../../shared/Subtitle/Subtitle";
-import ActiveLink from "../../shared/ActiveLink/ActiveLink";
+import Subtitle from "../../UI/Subtitle/Subtitle";
+import ActiveLink from "../../UI/ActiveLink/ActiveLink";
 
 const News = () => {
   const key = "61667a39-a309-4fcf-bd7a-8f503bf6d796";

@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 import { links } from "./const.js";
 
 import style from "./style.module.scss";
-import ActiveLink from "../../shared/ActiveLink/ActiveLink.tsx";
-import Button from "../../shared/Button/Button.tsx";
-import Select from "../../shared/Select/Select.tsx";
+import ActiveLink from "../../UI/ActiveLink/ActiveLink.tsx";
+import Button from "../../UI/Button/Button.tsx";
+import Select from "../../UI/Select/Select.tsx";
 
 const Header = () => {
   const nowRole = useSelector((state) => state.role.role);
@@ -23,7 +23,7 @@ const Header = () => {
     { label: "куратор", value: "curator" },
   ];
   const [selectedRole, setSelectedRole] = useState("user");
-  const handleSelectedRole = (event) => {
+  const handleSelectedRole = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRole(event.target.value);
     dispatch(setRole(event.target.value));
   };

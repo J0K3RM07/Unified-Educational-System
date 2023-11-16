@@ -1,7 +1,7 @@
-import Input from "../../../shared/Input/Input";
-import Textarea from "../../../shared/Textarea/Textarea";
-import Subtitle from "../../../shared/Subtitle/Subtitle";
-import Button from "../../../shared/Button/Button";
+import Input from "../../../UI/Input/Input";
+import Textarea from "../../../UI/Textarea/Textarea";
+import Subtitle from "../../../UI/Subtitle/Subtitle";
+import Button from "../../../UI/Button/Button";
 
 import style from "./style.module.scss";
 import { useRef, useState } from "react";
@@ -27,7 +27,7 @@ const Application = ({ active, setActive }) => {
     setButtonActiveFlag(active_button_flag_buf);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);

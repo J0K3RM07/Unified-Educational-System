@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ActiveLink from "../../shared/ActiveLink/ActiveLink";
-import Heading from "../../shared/Heading/Heading";
+import ActiveLink from "../../UI/ActiveLink/ActiveLink";
+import Heading from "../../UI/Heading/Heading";
 import style from "./style.module.scss";
 
 const NotFound = () => {

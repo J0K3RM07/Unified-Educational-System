@@ -2,8 +2,8 @@ import student from "../../../../assets/imgs/lectures/student.png";
 
 import style from "./style.module.scss";
 
-import Subtitle from "../../../shared/Subtitle/Subtitle";
-import ActiveLink from "../../../shared/ActiveLink/ActiveLink";
+import Subtitle from "../../../UI/Subtitle/Subtitle";
+import ActiveLink from "../../../UI/ActiveLink/ActiveLink";
 import Benefits from "../Benefits/Benefits";
 
 const Lectures = () => {

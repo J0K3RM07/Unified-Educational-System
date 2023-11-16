@@ -4,10 +4,10 @@ import Header from "../../layout/header/Header";
 import avatar from "../../../assets/imgs/peronalArea/avatarMan.svg";
 
 import style from "./style.module.scss";
-import Heading from "../../shared/Heading/Heading";
-import Button from "../../shared/Button/Button";
-import Input from "../../shared/Input/Input";
-import ActiveLink from "../../shared/ActiveLink/ActiveLink";
+import Heading from "../../UI/Heading/Heading";
+import Button from "../../UI/Button/Button";
+import Input from "../../UI/Input/Input";
+import ActiveLink from "../../UI/ActiveLink/ActiveLink";
 
 const Authorization = () => {
   return (

@@ -3,19 +3,19 @@ import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
 import axios from "axios";
 
-import Heading from "../../shared/Heading/Heading";
-import Button from "../../shared/Button/Button";
-import Input from "../../shared/Input/Input";
+import Heading from "../../UI/Heading/Heading";
+import Button from "../../UI/Button/Button";
+import Input from "../../UI/Input/Input";
 import avatar from "../../../assets/imgs/peronalArea/avatarMan.svg";
 
 import style from "./style.module.scss";
-import Subtitle from "../../shared/Subtitle/Subtitle";
+import Subtitle from "../../UI/Subtitle/Subtitle";
 
 const Rating = () => {
   const [data, setData] = useState(null);
   const [value, setValue] = useState("Nikita");
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
 

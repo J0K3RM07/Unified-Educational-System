@@ -2,7 +2,7 @@ import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
 
 // import useFetch from "../../../hooks/useFetch";
-import Heading from "../../shared/Heading/Heading";
+import Heading from "../../UI/Heading/Heading";
 
 import Application from "./Application/Application";
 
@@ -11,11 +11,12 @@ import HeaderUl from "./HeaderUl/HeaderUl";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Applications } from "../../../types";
 
 const Applications = () => {
   // let { data } = useFetch("http://localhost:8082/applications") // заменить на url с бека
 
-  const [data, setData] = useState();
+  const [data, setData] = useState<Applications>();
 
   useEffect(() => {
     fetch("http://localhost:8082/applications")
@@ -41,9 +42,9 @@ const Applications = () => {
     });
   }
 
-  function saveApplicationElem() {}
+  // function saveApplicationElem() {}
 
-  function editApplication(id: number, data_to_send: any) {
+  function editApplication(id: number, data_to_send: object) {
     axios.put("http://localhost:8082/applications/" + id, data_to_send);
     alert("Заявка отредактирована!");
   }
@@ -61,7 +62,7 @@ const Applications = () => {
               data.map((data) => (
                 <li key={data.id}>
                   <Application
-                    saveFunction={saveApplicationElem}
+                    //saveFunction={saveApplicationElem}
                     editApplication={editApplication}
                     deleteFunction={deleteApplication}
                     data={data}

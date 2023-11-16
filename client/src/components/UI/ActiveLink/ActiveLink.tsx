@@ -2,7 +2,13 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 import style from "./style.module.scss";
 
-const ActiveLink = ({ text, path, className }) => {
+interface IProps {
+  text?: string;
+  className?: string;
+  path: string;
+}
+
+const ActiveLink = ({ text, path, className }: IProps) => {
   const clases = classNames(style.link, className);
 
   return (
