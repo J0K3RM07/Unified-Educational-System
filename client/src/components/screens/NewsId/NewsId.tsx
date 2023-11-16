@@ -2,7 +2,7 @@ import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
 
 import style from "./style.module.scss";
-import Heading from "../../shared/Heading/Heading";
+import Heading from "../../UI/Heading/Heading";
 
 const NewsId = () => {
   return (

@@ -1,7 +1,13 @@
 import style from "./style.module.scss";
 import classNames from "classnames";
 
-const Textarea = ({ id, className, label, ...attrs }) => {
+interface IProps {
+  id: string;
+  className: string;
+  label: string;
+}
+
+const Textarea = ({ id, className, label, ...attrs }: IProps) => {
   const clases = classNames(style.textarea, className);
 
   return (

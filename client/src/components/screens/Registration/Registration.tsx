@@ -2,9 +2,9 @@ import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
 
 import style from "./style.module.scss";
-import Heading from "../../shared/Heading/Heading";
-import Button from "../../shared/Button/Button";
-import Input from "../../shared/Input/Input";
+import Heading from "../../UI/Heading/Heading";
+import Button from "../../UI/Button/Button";
+import Input from "../../UI/Input/Input";
 
 const Registration = () => {
   return (

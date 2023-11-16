@@ -1,7 +1,15 @@
 import classNames from "classnames";
 import style from "./style.module.scss";
 
-const Input = ({ id, className, label, error, ...attrs }) => {
+interface IProps {
+  id?: string;
+  className: string;
+  label?: string;
+  error?: any;
+  attrs?: any;
+}
+
+const Input = ({ id, className, label, error, ...attrs }: IProps) => {
   const clases = classNames(style.input, className, { error });
 
   return (

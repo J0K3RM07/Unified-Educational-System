@@ -4,11 +4,11 @@ import useFetch from "../../../hooks/useFetch";
 
 import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
-import Heading from "../../shared/Heading/Heading";
-import Subtitle from "../../shared/Subtitle/Subtitle";
+import Heading from "../../UI/Heading/Heading";
+import Subtitle from "../../UI/Subtitle/Subtitle";
 import style from "./style.module.scss";
-import Button from "../../shared/Button/Button";
-import ActiveLink from "../../shared/ActiveLink/ActiveLink";
+import Button from "../../UI/Button/Button";
+import ActiveLink from "../../UI/ActiveLink/ActiveLink";
 
 const Course = () => {
   const { id } = useParams();
@@ -24,7 +24,7 @@ const Course = () => {
       <Header />
       {data && (
         <div className={style.course}>
-          <Heading text={data?.name} className={style.title} />
+          <Heading text={data.name} className={style.title} />
           <div className={style.abstract}>
             <div className={style.wrapper}>
               <Subtitle text={"Конспекты"} className={style.subtitle} />
@@ -38,7 +38,7 @@ const Course = () => {
 
           <div className={style.content}>
             <Subtitle text={"Видео-материалы"} className={style.subtitle} />
-            <ActiveLink text={"Перейти"} path={data?.link} />
+            <ActiveLink text={"Перейти"} path={data.link} />
           </div>
           <div className={style.content}>
             <Subtitle text={"Задания"} className={style.subtitle} />

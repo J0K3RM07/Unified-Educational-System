@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import student from "../../../../assets/imgs/learning/student.png";
-import Heading from "../../../shared/Heading/Heading";
+import Heading from "../../../UI/Heading/Heading";
 
 import style from "./style.module.scss";
-import Button from "../../../shared/Button/Button";
+import Button from "../../../UI/Button/Button";
 import Application from "../Application/Application";
 
 const Learning = () => {

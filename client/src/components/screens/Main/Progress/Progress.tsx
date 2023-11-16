@@ -1,6 +1,6 @@
 import students from "../../../../assets/imgs/progress/students.png";
-import ActiveLink from "../../../shared/ActiveLink/ActiveLink";
-import Subtitle from "../../../shared/Subtitle/Subtitle";
+import ActiveLink from "../../../UI/ActiveLink/ActiveLink";
+import Subtitle from "../../../UI/Subtitle/Subtitle";
 
 import style from "./style.module.scss";
 

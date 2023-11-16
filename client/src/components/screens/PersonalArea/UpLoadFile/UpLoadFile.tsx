@@ -1,7 +1,7 @@
 import { useState, useRef, forwardRef } from "react";
 
 import style from "./style.module.scss";
-import Button from "../../../shared/Button/Button";
+import Button from "../../../UI/Button/Button";
 
 const server = "server"; // заменить на сервер с бэка
 

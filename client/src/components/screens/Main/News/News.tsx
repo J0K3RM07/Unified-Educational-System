@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { format } from "date-fns";
 
-import Subtitle from "../../../shared/Subtitle/Subtitle";
+import Subtitle from "../../../UI/Subtitle/Subtitle";
 import style from "./style.module.scss";
-import ActiveLink from "../../../shared/ActiveLink/ActiveLink";
+import ActiveLink from "../../../UI/ActiveLink/ActiveLink";
 
 import { Link } from "react-router-dom";
 

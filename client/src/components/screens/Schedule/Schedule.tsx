@@ -4,9 +4,9 @@ import axios from "axios";
 
 import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
-import Heading from "../../shared/Heading/Heading";
-import Button from "../../shared/Button/Button";
-import Select from "../../shared/Select/Select";
+import Heading from "../../UI/Heading/Heading";
+import Button from "../../UI/Button/Button";
+import Select from "../../UI/Select/Select";
 import style from "./style.module.scss";
 
 const Schedule = () => {
@@ -18,7 +18,8 @@ const Schedule = () => {
     { label: "Группа 3", value: "group3" },
   ];
   const [selectedGroup, setSelectedGroup] = useState("group1");
-  const handleGroupChange = (event) => setSelectedGroup(event.target.value);
+  const handleGroupChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setSelectedGroup(event.target.value);
 
   const [data, setData] = useState([]);
 

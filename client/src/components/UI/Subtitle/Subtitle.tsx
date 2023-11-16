@@ -1,7 +1,12 @@
 import classNames from "classnames";
 import style from "./style.module.scss";
 
-const Subtitle = ({ text, className }) => {
+interface IProps {
+  text: string;
+  className?: string;
+}
+
+const Subtitle = ({ text, className }: IProps) => {
   const clases = classNames(style.subtitle, className);
 
   return <h2 className={clases}>{text}</h2>;

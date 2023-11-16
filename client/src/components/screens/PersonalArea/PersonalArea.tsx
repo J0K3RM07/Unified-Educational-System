@@ -3,13 +3,13 @@ import useFetch from "../../../hooks/useFetch";
 import avatarMan from "../../../assets/imgs/peronalArea/avatarMan.svg";
 import Header from "../../layout/header/Header";
 import Footer from "../../layout/footer/Footer";
-import Heading from "../../shared/Heading/Heading";
-import Button from "../../shared/Button/Button";
+import Heading from "../../UI/Heading/Heading";
+import Button from "../../UI/Button/Button";
 
-import Input from "../../shared/Input/Input";
-import Textarea from "../../shared/Textarea/Textarea";
+import Input from "../../UI/Input/Input";
+import Textarea from "../../UI/Textarea/Textarea";
 import UpLoadFile from "./UpLoadFile/UpLoadFile";
-import Select from "../../shared/Select/Select";
+import Select from "../../UI/Select/Select";
 import style from "./style.module.scss";
 
 const PersonalArea = () => {
@@ -21,14 +21,16 @@ const PersonalArea = () => {
     { label: "Группа 3", value: "3" },
   ];
   const [selectedGroup, setSelectedGroup] = useState("");
-  const handleGroupChange = (event) => setSelectedGroup(event.target.value);
+  const handleGroupChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setSelectedGroup(event.target.value);
 
   const gender = [
     { label: data?.gender, value: "муж" },
     { label: "жен", value: "жен" },
   ];
   const [selectedGender, setSelectedGender] = useState("");
-  const handleGenderChange = (event) => setSelectedGender(event.target.value);
+  const handleGenderChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setSelectedGender(event.target.value);
 
   return (
     <div className='container'>

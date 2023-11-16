@@ -1,8 +1,8 @@
 import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
 
-import Heading from "../../shared/Heading/Heading";
-import ActiveLink from "../../shared/ActiveLink/ActiveLink";
+import Heading from "../../UI/Heading/Heading";
+import ActiveLink from "../../UI/ActiveLink/ActiveLink";
 import style from "./style.module.scss";
 
 import securityInfoImg from "../../../assets/imgs/security/security-info.png";
