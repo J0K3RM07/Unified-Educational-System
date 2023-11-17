@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'martor',
 
     'edu_sys.apps.EduSysConfig',
+    'users.apps.UsersConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
