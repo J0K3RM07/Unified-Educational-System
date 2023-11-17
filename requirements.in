@@ -1,0 +1,8 @@
+asgiref
+Django
+sqlparse
+Pillow
+djangorestframework
+martor
+python-dotenv
+gunicorn
