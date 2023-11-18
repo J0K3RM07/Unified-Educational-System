@@ -65,14 +65,12 @@ class Achievement(models.Model):
 class Lesson(models.Model):
     date = models.DateTimeField('Дата', auto_now_add=True)
     classroom = models.CharField(verbose_name='Аудитория', max_length=10)
-    group = models.ForeignKey("Group", on_delete=models.RESTRICT)
     rating = models.ForeignKey("Rating", on_delete=models.RESTRICT)
 
 
 class Rating(models.Model):
     rating = models.CharField(verbose_name='Оценка', max_length=3)
     date = models.DateTimeField(verbose_name='Дата', auto_now_add=True)
-    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT)
     teacher = models.ForeignKey("Teacher", on_delete=models.RESTRICT)
 
 
