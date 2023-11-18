@@ -1,0 +1,71 @@
+@import "../../../assets/styles/variables";
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.form {
+    width: 420px;
+    padding: 48px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    position: relative;
+
+    border: 2px solid $gray-color;
+    border-radius: 10px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 265px;
+        height: 318px;
+        top: 52px;
+        left: -340px;
+        background-image: url('../../../assets/imgs/auth/man.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 265px;
+        height: 318px;
+        top: 52px;
+        right: -340px;
+        background-image: url('../../../assets/imgs/auth/women.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+}
+
+.title {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.input {
+    width: calc(420px - 64px);
+}
+
+.submit {
+    width: calc(420px - 64px);
+}
+
+.reg {
+    color: $primary-color;
+    font-size: $font-size;
+}

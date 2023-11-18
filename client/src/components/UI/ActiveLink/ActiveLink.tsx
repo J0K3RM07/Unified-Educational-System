@@ -4,10 +4,10 @@ import style from "./style.module.scss";
 import { IProps } from "./interface";
 
 const ActiveLink = ({ text, path, className }: IProps) => {
-  const clases = classNames(style.link, className);
+  const classes = classNames(style.link, className);
 
   return (
-    <Link className={clases} to={path}>
+    <Link className={classes} to={path}>
       {text}
     </Link>
   );
