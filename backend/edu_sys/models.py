@@ -64,6 +64,7 @@ class Achievement(models.Model):
 
 
 class Lesson(models.Model):
+    name = models.CharField(max_length=100)
     date = models.DateTimeField('Дата', auto_now_add=True)
     classroom = models.CharField(verbose_name='Аудитория', max_length=10)
     rating = models.ForeignKey("Rating", on_delete=models.RESTRICT)
