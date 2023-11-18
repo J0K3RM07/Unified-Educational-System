@@ -1,36 +1,14 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { setRole } from "../../../store/roleReducer/roleReducer.js";
 import { useNavigate } from "react-router-dom";
 
 import { links } from "./const.js";
+import logo from "../../../assets/imgs/header/logo.svg"
 
 import style from "./style.module.scss";
-import ActiveLink from "../../UI/ActiveLink/ActiveLink.tsx";
 import Button from "../../UI/Button/Button.tsx";
-import Select from "../../UI/Select/Select.tsx";
 
 const Header = () => {
-  const nowRole = useSelector((state) => state.role.role);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const role = [
-    { label: "гость", value: "guest" },
-    { label: "студент", value: "student" },
-    { label: "учитель", value: "teacher" },
-    { label: "куратор", value: "curator" },
-  ];
-  const [selectedRole, setSelectedRole] = useState("user");
-  const handleSelectedRole = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedRole(event.target.value);
-    dispatch(setRole(event.target.value));
-  };
-
-  const signOut = () => {
-    dispatch(setRole("guest"));
-  };
 
   const signIn = () => {
     navigate("/auth", { replace: true });
@@ -38,9 +16,11 @@ const Header = () => {
 
   return (
     <div className={style.header}>
-      <Link to={"/"} className={style.logo}>
-        <p className={style.logoText}>СКБ-Университет</p>
-      </Link>
+      <div>
+        <Link to={"/"} className={style.logo}>
+          <img src={logo} alt="" />
+        </Link>
+      </div>
       <ul className={style.ul}>
         {links.map((link) => {
           return (
@@ -52,21 +32,9 @@ const Header = () => {
           );
         })}
       </ul>
-      <Select
-        defaultValue={nowRole}
-        defaultOptions={nowRole}
-        options={role}
-        value={nowRole}
-        onChange={handleSelectedRole}
-        className={style.select}
-      />
-      {nowRole === "guest" ? (
-        <Button children={"Войти →"} onClick={signIn} />
-      ) : (
-        <Button children={"Выйти →"} onClick={signOut} />
-      )}
+      <Button children={"Войти →"} onClick={signIn} />
     </div>
-  );
-};
+  )
+}
 
 export default Header;

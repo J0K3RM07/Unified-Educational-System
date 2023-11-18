@@ -1,10 +1,12 @@
+@import "../../../assets/styles/variables";
+
 .header {
     min-height: 90px;
     display: flex;
     align-items: center;
 
-    background: var(--accent-color);
-    box-shadow: 0 0 0 100vmax var(--accent-color);
+    background: $dark-color;
+    box-shadow: 0 0 0 100vmax $dark-color;
     clip-path: inset(0 -100vmax);
 }
 
@@ -15,10 +17,6 @@
     line-height: 100%;
 }
 
-.logoText {
-    color: var(--light-color);
-    transition: color ease-in .2s;
-}
 
 .logoText:hover {
     color: var(--accent2-color);

@@ -1,5 +1,7 @@
-function App() {
-  return <></>;
-}
+import Authorization from "./components/screens/Authorization/Authorization";
 
-export default App;
+export function App() {
+	return <>	
+		<Authorization />
+	</>
+}
