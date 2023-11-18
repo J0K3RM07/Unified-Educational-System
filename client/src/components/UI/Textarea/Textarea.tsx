@@ -1,11 +1,6 @@
 import style from "./style.module.scss";
 import classNames from "classnames";
-
-interface IProps {
-  id: string;
-  className: string;
-  label: string;
-}
+import { IProps } from "./interface";
 
 const Textarea = ({ id, className, label, ...attrs }: IProps) => {
   const clases = classNames(style.textarea, className);
@@ -17,7 +12,6 @@ const Textarea = ({ id, className, label, ...attrs }: IProps) => {
           {label}
         </label>
       )}
-      {attrs.required && <span className={style.required}>Required</span>}
       <textarea name={id} id={id} className={clases} {...attrs}></textarea>
     </div>
   );
