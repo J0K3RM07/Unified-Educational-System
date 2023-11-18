@@ -1,13 +1,6 @@
 import style from "./style.module.scss";
 import classNames from "classnames";
-
-interface IProps {
-  children?: string;
-  className?: string;
-  onClick?: () => void;
-  active?: any;
-  disabled?: any;
-}
+import { IProps } from "./interface";
 
 const Button = ({ children, className, onClick, active, disabled }: IProps) => {
   const clases = classNames(style.btn, className, { active });

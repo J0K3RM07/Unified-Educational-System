@@ -1,17 +1,6 @@
 import style from "./style.module.scss";
 import classNames from "classnames";
-
-interface IOption {
-  value: string;
-  label: string;
-}
-
-interface IProps {
-  options: IOption[];
-  value: string;
-  onChange: () => void;
-  className: string;
-}
+import { IProps } from "./interface";
 
 const Select = ({ options, value, onChange, className }: IProps) => {
   const clases = classNames(style.select, className);

@@ -1,10 +1,6 @@
 import style from "./style.module.scss";
 import classNames from "classnames";
-
-interface IProps {
-  text: string;
-  className?: string;
-}
+import { IProps } from "./interface";
 
 const Heading = ({ text, className }: IProps) => {
   const clases = classNames(style.heading, className);
