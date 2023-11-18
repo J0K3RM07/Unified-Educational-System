@@ -1,13 +1,6 @@
 import classNames from "classnames";
 import style from "./style.module.scss";
-
-interface IProps {
-  id?: string;
-  className: string;
-  label?: string;
-  error?: any;
-  attrs?: any;
-}
+import { IProps } from "./interface";
 
 const Input = ({ id, className, label, error, ...attrs }: IProps) => {
   const clases = classNames(style.input, className, { error });
@@ -19,7 +12,6 @@ const Input = ({ id, className, label, error, ...attrs }: IProps) => {
           {label}
         </label>
       )}
-      {attrs.required && <span className={style.required}>Required</span>}
       <input name={id} id={id} className={clases} {...attrs} />
       {error && <span className={style.error}>{error}</span>}
     </div>
