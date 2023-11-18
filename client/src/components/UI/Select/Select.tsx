@@ -11,7 +11,8 @@ const Select = ({ options, value, onChange, className, id }: IProps) => {
         <option
           key={option.value}
           value={option.value}
-          className={style.options}>
+          className={style.options}
+        >
           {option.label}
         </option>
       ))}
