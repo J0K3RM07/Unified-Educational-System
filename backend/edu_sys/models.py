@@ -24,13 +24,14 @@ class Student(User):
     institution = models.ForeignKey("Institution", on_delete=models.RESTRICT, blank=True, null=True)
     achievement = models.ForeignKey('Achievement', on_delete=models.RESTRICT, blank=True, null=True)
     parent = models.ManyToManyField("Parent")
-    subject = models.ForeignKey("Subject", on_delete=models.CASCADE)
+    subject = models.ForeignKey("Subject", on_delete=models.RESTRICT)
+
     def __str__(self):
         return self.name
 
 
 class Teacher(User):
-    subject = models.ForeignKey("Subject", on_delete=models.CASCADE)
+    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT)
 
     def __str__(self):
         return self.name
@@ -38,7 +39,8 @@ class Teacher(User):
 
 class Admin(User):
     is_superuser = True
-    post = models.ForeignKey("Post", on_delete=models.CASCADE)
+    post = models.ForeignKey("Post", on_delete=models.RESTRICT)
+
     def __str__(self):
         return self.name
 
@@ -63,15 +65,15 @@ class Achievement(models.Model):
 class Lesson(models.Model):
     date = models.DateTimeField('Дата', auto_now_add=True)
     classroom = models.CharField(verbose_name='Аудитория', max_length=10)
-    group = models.ForeignKey("Group", on_delete=models.CASCADE)
-    rating = models.ForeignKey("Rating", on_delete=models.CASCADE)
+    group = models.ForeignKey("Group", on_delete=models.RESTRICT)
+    rating = models.ForeignKey("Rating", on_delete=models.RESTRICT)
+
 
 class Rating(models.Model):
     rating = models.CharField(verbose_name='Оценка', max_length=3)
     date = models.DateTimeField(verbose_name='Дата', auto_now_add=True)
-    # author = models.ForeignKey(User, on_delete=models.CASCADE) #Непонятно зачем пока что
-    # user = models.ForeignKey(User, on_delete=models.CASCADE) #Через lession
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT)
+    teacher = models.ForeignKey("Teacher", on_delete=models.RESTRICT)
 
 
 class Institution(models.Model):
@@ -93,14 +95,14 @@ class Group(models.Model):
     name = models.CharField(verbose_name='Название', max_length=300)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
+    subject = models.ForeignKey("Subject", on_delete=models.RESTRICT)
 
 
 class Subject(models.Model):
     name = models.CharField(verbose_name='Название', max_length=300)
-    start_date = models.DateTimeField()
-    time
-    lesson = models.ForeignKey(Group, on_delete=models.CASCADE) #Так это и есть урок не ?
-
+    date = models.DurationField()
+    time = models.IntegerField() #колво часов
+    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT) #Так это и есть урок не ?
 
 
 class Post(models.Model):
