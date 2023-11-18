@@ -10,7 +10,10 @@ class User(AbstractUser):
     patronymic = models.CharField(verbose_name='Отчество', blank=True, max_length=25, null=True)
     age = models.CharField(verbose_name='Возраст', max_length=3, blank=True, null=True)
     phone_number = PhoneNumberField(blank=True, null=True)
+    about = models.TextField(verbose_name="О себе", blank=True, null=True)
+    achievement = models.ForeignKey('Achievement', on_delete=models.RESTRICT, blank=True, null=True)
     is_superuser = False
+
 
     def __str__(self):
         return self.name
@@ -20,9 +23,7 @@ class User(AbstractUser):
 
 
 class Student(User):
-    about = models.TextField(verbose_name="О себе", blank=True, null=True)
     institution = models.ForeignKey("Institution", on_delete=models.RESTRICT, blank=True, null=True)
-    achievement = models.ForeignKey('Achievement', on_delete=models.RESTRICT, blank=True, null=True)
     parent = models.ManyToManyField("Parent")
     subject = models.ForeignKey("Subject", on_delete=models.RESTRICT)
 
