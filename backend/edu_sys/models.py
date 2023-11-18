@@ -71,7 +71,7 @@ class Lesson(models.Model):
 class Rating(models.Model):
     rating = models.CharField(verbose_name='Оценка', max_length=3)
     date = models.DateTimeField(verbose_name='Дата', auto_now_add=True)
-    teacher = models.ForeignKey("Teacher", on_delete=models.RESTRICT)
+    teacher = models.OneToOneField("Teacher", on_delete=models.RESTRICT)
 
 
 class Institution(models.Model):
