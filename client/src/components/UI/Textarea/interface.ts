@@ -1,4 +1,5 @@
-export interface IProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface IProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   id?: string;
   className?: string;
   label?: string;
