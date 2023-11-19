@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='django-insecure-123')
 
-DEBUG = os.getenv('DEBUG', default=False) == 'True'
+DEBUG = True #os.getenv('DEBUG', default=False) == 'True'
 
 ALLOWED_HOSTS = os.getenv(
     'ALLOWED_HOSTS',
@@ -23,14 +23,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'rest_framework.authtoken',
     'martor',
-
     'edu_sys.apps.EduSysConfig',
     'users.apps.UsersConfig',
     'api.apps.ApiConfig',
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
@@ -108,6 +107,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "edu_sys.User"
 
 ####################################
     ##  MARTOR  CONFIGURATION ##
