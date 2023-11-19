@@ -6,3 +6,4 @@ djangorestframework
 martor
 python-dotenv
 gunicorn
+drf_spectacular

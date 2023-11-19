@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'martor',
 
     'edu_sys.apps.EduSysConfig',
+    'users.apps.UsersConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -159,3 +161,14 @@ ALLOWED_HTML_ATTRIBUTES = [
     "scope", "src", "style", "title", "type", "width"
 ]
 ####################################
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Творчество',
+    'DESCRIPTION': 'Единая образовательная среда Творчество',
+    'VERSION': 'v1.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
