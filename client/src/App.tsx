@@ -5,6 +5,7 @@ import { AuthorizationPage } from "./pages/AuthorizationPage";
 import { PersonalAreaPage } from "./pages/PersonalAreaPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { TeacherAreaPage } from "./pages/TeacherAreaPage";
+import { SchedulePage } from "./pages/SchedulePage";
 
 export function App() {
   return (
@@ -14,10 +15,10 @@ export function App() {
         <Route path='/auth' element={<AuthorizationPage />} />
         <Route path='/reg' element={<RegistrationPage />} />
         <Route path='/personal-area' element={<PersonalAreaPage />} />
-        <Route path='/error' element={<NotFoundPage />} />
+        <Route path='/*' element={<NotFoundPage />} />
         <Route path='/teacher-area/:name' element={<TeacherAreaPage />} />
-        {/* <Route path="/schedule" element={<Schedule />} />
-			<Route path="/rating" element={<RatingPage />} />
+        <Route path="/schedule" element={<SchedulePage />} />
+			{/* <Route path="/rating" element={<RatingPage />} />
 			<Route path="/events" element={<EventsPage />} />
 			<Route path="/events/:id" element={<EventPage />} />
 			<Route path="/courses" element={<CoursesPage />} />
