@@ -1,11 +1,13 @@
+@import "../../../assets/styles/variables";
+
 .footer {
     margin-top: auto;
     min-height: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
 
-    background-color: var(--accent2-color);
-    box-shadow: 0 0 0 100vmax var(--accent2-color);
+    background-color: $dark-color;
+    box-shadow: 0 0 0 100vmax $dark-color;
     clip-path: inset(0 -100vmax);
 }
 
@@ -15,27 +17,14 @@
     justify-content: space-between;
 }
 
-.socials {
+.contactsBox, .securityBox {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 60px;
-    min-height: 60px;
-}
-
-.li:hover {
-    border-radius: 50%;
-    background-color: var(--accent-color);
-}
-
-.text {
-    color: var(--light-color);
-    text-align: right;
+.contact, .security, .rights {
+    font-size: $font-size;
+    display: block;
+    color: $light-color;
 }

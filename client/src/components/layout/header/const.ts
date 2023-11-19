@@ -3,6 +3,6 @@ export const links = [
     {name: 'Курсы', path: '/courses'},
     {name: 'Расписание', path: '/schedule'},
     {name: 'Рейтинг', path: '/rating'},
+    {name: 'Домашнее задание', path: '/homework'},
     {name: 'Личный кабинет', path: '/personal-area'},
-    {name: 'Заявки', path: '/applications'},
 ]

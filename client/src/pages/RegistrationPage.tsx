@@ -1,7 +1,5 @@
-import Registration from "../components/screens/Registration/Registration";
+import { Registration } from "../components/screens/Registration/Registration"
 
-const RegistrationPage = () => {
-  return <Registration />;
-};
-
-export default RegistrationPage;
+export const RegistrationPage = () => {
+    return <Registration />
+}
