@@ -1,6 +1,8 @@
 @import "../../../assets/styles/variables";
 
 .reg {
+    min-height: calc(100vh - 250px);
+
     display: flex;
     flex-direction: column;
     justify-content: center;

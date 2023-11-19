@@ -8,38 +8,36 @@ import styles from "./styles.module.scss"
 
 export const Authorization = () => {
     return (
-        <div className='container'>
-            <Layout>
-                <div className={styles.auth}>
-                    <form className={styles.form}>
-                        <span className={styles.title}>Авторизация</span>
-                        <Input 
-                            className={styles.input}
-                            label={'ФИО'}
-                            placeholder={'Введите ваше ФИО'}
-                        />
+		<Layout>
+			<div className={styles.auth}>
+				<form className={styles.form}>
+					<span className={styles.title}>Авторизация</span>
+					<Input 
+						className={styles.input}
+						label={'ФИО'}
+						placeholder={'Введите ваше ФИО'}
+					/>
 
-                        <Input 
-                            className={styles.input}
-                            label={'Пароль'}
-                            type={'password'}
-                            placeholder={'Введите пароль'}
-                        />
+					<Input 
+						className={styles.input}
+						label={'Пароль'}
+						type={'password'}
+						placeholder={'Введите пароль'}
+					/>
 
-                        <Button 
-                            className={styles.submit}
-                            children={'Войти'}
-                        />
+					<Button 
+						className={styles.submit}
+						children={'Войти'}
+					/>
 
-                    </form>
-                    <div className={styles.regBox}>
-                        <span>Еще нет аккаунта? </span>
-                        <Link to={'/reg'} className={styles.reg}>
-                            Зарегистрироваться
-                        </Link>
-                    </div>
-                </div>
-            </Layout>
-        </div>
+				</form>
+				<div className={styles.regBox}>
+					<span>Еще нет аккаунта? </span>
+					<Link to={'/reg'} className={styles.reg}>
+						Зарегистрироваться
+					</Link>
+				</div>
+			</div>
+		</Layout>
     )
 }

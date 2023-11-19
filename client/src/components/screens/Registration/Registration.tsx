@@ -8,46 +8,44 @@ import styles from "./styles.module.scss";
 
 export const Registration = () => {
     return (
-		<div className='container'>
-			<Layout>
-				<div className={styles.reg}>
-					<form className={styles.form}>
-						<span className={styles.title}>Регистрация</span>
-						<Input 
-							className={styles.input}
-							label={'ФИО'}
-							placeholder={'Введите ваше ФИО'}
-						/>
+		<Layout>
+			<div className={styles.reg}>
+				<form className={styles.form}>
+					<span className={styles.title}>Регистрация</span>
+					<Input 
+						className={styles.input}
+						label={'ФИО'}
+						placeholder={'Введите ваше ФИО'}
+					/>
 
-						<Input 
-							className={styles.input}
-							label={'Пароль'}
-							type={'password'}
-							placeholder={'Введите пароль'}
-						/>
+					<Input 
+						className={styles.input}
+						label={'Пароль'}
+						type={'password'}
+						placeholder={'Введите пароль'}
+					/>
 
-						<Input 
-							className={styles.input}
-							label={'Подтверждение пароля'}
-							type={'password'}
-							placeholder={'Подтвердите пароль'}
-						/>
+					<Input 
+						className={styles.input}
+						label={'Подтверждение пароля'}
+						type={'password'}
+						placeholder={'Подтвердите пароль'}
+					/>
 
-						<Button 
-							className={styles.submit}
-							children={'Войти'}
-						
-						/>
+					<Button 
+						className={styles.submit}
+						children={'Войти'}
+					
+					/>
 
-					</form>
-					<div className={styles.authBox}>
-						<span>Есть аккаунт? </span>
-						<Link to={'/auth'} className={styles.auth}>
-							Войти
-						</Link>
-					</div>
+				</form>
+				<div className={styles.authBox}>
+					<span>Есть аккаунт? </span>
+					<Link to={'/auth'} className={styles.auth}>
+						Войти
+					</Link>
 				</div>
-			</Layout>
-		</div>
+			</div>
+		</Layout>
     )
 }

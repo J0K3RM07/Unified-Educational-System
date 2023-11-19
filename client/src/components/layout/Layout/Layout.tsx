@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
-		<div>
+		<div className='container'>
 			<Header />
 				<main className={styles.main}>
 					{children}

@@ -1,4 +1,4 @@
 export interface IProps {
-  text: string;
+  children: string;
   className?: string;
 }
