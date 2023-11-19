@@ -1,10 +1,9 @@
 import classNames from "classnames";
 import style from "./style.module.scss";
 import { IProps } from "./interface";
-<<<<<<< HEAD
 
-const Input = ({ id, className, label, error, ...attrs }: IProps) => {
-  const clases = classNames(style.input, className, { error });
+export const Input = ({ id, className, label, error, ...attrs }: IProps) => {
+  const classes = classNames(style.input, className, { error });
 
   return (
     <div className={style.inputWrapper}>
@@ -13,25 +12,8 @@ const Input = ({ id, className, label, error, ...attrs }: IProps) => {
           {label}
         </label>
       )}
-      <input name={id} id={id} className={clases} {...attrs} />
+      <input name={id} id={id} className={classes} {...attrs} />
       {error && <span className={style.error}>{error}</span>}
     </div>
   );
-=======
-
-export const Input = ({ id, className, label, error, ...attrs }: IProps) => {
-  const classes = classNames(style.input, className, { error });
-
-	return (
-		<div className={style.inputWrapper}>
-			{label && (
-				<label className={style.label} htmlFor={id}>
-				{label}
-				</label>
-			)}
-			<input name={id} id={id} className={classes} {...attrs} />
-			{error && <span className={style.error}>{error}</span>}
-		</div>
-	);
->>>>>>> nikita
 };
