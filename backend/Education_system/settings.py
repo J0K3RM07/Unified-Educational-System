@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='django-insecure-123')
 
-DEBUG = os.getenv('DEBUG', default=False) == 'True'
+DEBUG = True #os.getenv('DEBUG', default=False) == 'True'
 
 ALLOWED_HOSTS = os.getenv(
     'ALLOWED_HOSTS',
@@ -23,14 +23,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'rest_framework.authtoken',
+    "djoser",
+    "drf_spectacular",
     'martor',
-
     'edu_sys.apps.EduSysConfig',
-    'users.apps.UsersConfig',
     'api.apps.ApiConfig',
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
@@ -109,6 +109,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = 'edu_sys.User'
+
 ####################################
     ##  MARTOR  CONFIGURATION ##
 ####################################
@@ -163,7 +165,18 @@ ALLOWED_HTML_ATTRIBUTES = [
 ####################################
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ],
+}
+
+DJOSER = {
+    "HIDE_USERS": False,
+    "LOGIN_FIELD": "username",
 }
 
 SPECTACULAR_SETTINGS = {
