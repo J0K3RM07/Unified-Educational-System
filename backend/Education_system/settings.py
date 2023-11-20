@@ -25,9 +25,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    "djoser",
+    "drf_spectacular",
     'martor',
     'edu_sys.apps.EduSysConfig',
-    'users.apps.UsersConfig',
     'api.apps.ApiConfig',
     "phonenumber_field",
 ]
@@ -108,7 +109,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = "edu_sys.User"
+AUTH_USER_MODEL = 'edu_sys.User'
 
 ####################################
     ##  MARTOR  CONFIGURATION ##
@@ -164,7 +165,18 @@ ALLOWED_HTML_ATTRIBUTES = [
 ####################################
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ],
+}
+
+DJOSER = {
+    "HIDE_USERS": False,
+    "LOGIN_FIELD": "username",
 }
 
 SPECTACULAR_SETTINGS = {
