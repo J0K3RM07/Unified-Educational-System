@@ -1,60 +1,31 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, AbstractBaseUser, PermissionsMixin
 from phonenumber_field.modelfields import PhoneNumberField
 from martor.models import MartorField
 
 
-class User(AbstractUser):
+class User(AbstractUser, PermissionsMixin):
     name = models.CharField(verbose_name='Имя', max_length=25)
     surname = models.CharField(verbose_name='Фамилия', max_length=25)
     patronymic = models.CharField(verbose_name='Отчество', blank=True, max_length=25, null=True)
     age = models.CharField(verbose_name='Возраст', max_length=3, blank=True, null=True)
     phone_number = PhoneNumberField(blank=True, null=True)
-    about = MartorField(verbose_name="О себе", blank=True, null=True)
+    about = models.CharField(verbose_name="О себе", blank=True, null=True, max_length=500)
     achievement = models.ForeignKey('Achievement', on_delete=models.RESTRICT, blank=True, null=True)
-    is_superuser = False
-
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        abstract = True
-
-
-class Student(User):
     institution = models.ForeignKey("Institution", on_delete=models.RESTRICT, blank=True, null=True)
-    parent = models.ManyToManyField("Parent")
+    parent = models.ManyToManyField("Parent", blank=True, default=None)
     subject = models.ForeignKey("Subject", on_delete=models.RESTRICT)
-
-    def __str__(self):
-        return self.name
-
-
-class Teacher(User):
     lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT)
+    post = models.ForeignKey("Post", on_delete=models.RESTRICT, blank=True)
+    role = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
-
-
-class Admin(User):
-    is_superuser = True
-    post = models.ForeignKey("Post", on_delete=models.RESTRICT)
-
-    def __str__(self):
-        return self.name
-
-
-class Parent(User):
-
-    def __str__(self):
-        return self.name
+        return self.username
 
 
 class Achievement(models.Model):
     name = models.TextField()
-    description = MartorField(
+    description = models.CharField(
         verbose_name='Описание',
         blank=True,
         null=True,
@@ -78,7 +49,8 @@ class Rating(models.Model):
 
 class Institution(models.Model):
     name = models.CharField(verbose_name='Название', max_length=300)
-    description = MartorField(
+    description = models.CharField(
+        max_length=500,
         verbose_name='Описание',
         blank=True,
         null=True
@@ -101,8 +73,8 @@ class Group(models.Model):
 class Subject(models.Model):
     name = models.CharField(verbose_name='Название', max_length=300)
     date = models.DurationField()
-    time = models.IntegerField() #колво часов
-    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT) #Так это и есть урок не ?
+    time = models.IntegerField()  # колво часов
+    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT)  # Так это и есть урок не ?
 
 
 class Post(models.Model):
@@ -115,4 +87,4 @@ class Post(models.Model):
         blank=True,
         null=True,
     )
-    text = MartorField(verbose_name='Текст')
+    text = models.CharField(verbose_name='Текст', max_length=500)
