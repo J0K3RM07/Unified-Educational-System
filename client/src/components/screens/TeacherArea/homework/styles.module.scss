@@ -1,54 +1,52 @@
 @import "../../../../assets/styles/variables";
 
 .homework {
-    border-radius: 16px;
-    border: 3px solid $border-color;
-    width: 100%;
-    padding: 10px 40px 10px 40px;
+  border-radius: 16px;
+  border: 3px solid $border-color;
+  width: 100%;
+  padding: 10px 40px 10px 40px;
 
-    &_title {
-        color: $dark-color;
-        font-size: $font-size-h3;
-        ;
-        font-weight: 500;
-        line-height: 135%;
-        margin-bottom: 30px;
+  &_title {
+    color: $dark-color;
+    font-size: $font-size-h3;
+    font-weight: 500;
+    line-height: 135%;
+    margin-bottom: 30px;
+  }
+
+  &_textarea {
+    width: 80%;
+
+    &__item {
+      margin-bottom: 32px;
+      height: 84px;
     }
+  }
 
-    &_textarea {
-        width: 80%;
-
-        &__item {
-            margin-bottom: 32px;
-            height: 84px;
-        }
-    }
-
-    &__download {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #EBF9F6;
-        border-radius: 6px;
-        border: 1px dashed $dark-color;
-        font-size: $font-size;
-    }
+  &__download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ebf9f6;
+    border-radius: 6px;
+    border: 1px dashed $dark-color;
+    font-size: $font-size;
+  }
 }
 
 .content {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-bottom: 30px;
 }
 
 .save {
-    margin-left: 90%;
+  margin-left: 90%;
 }
 
 .button {
-    background-color: #EBF9F6;
-    margin: 2px;
-    color: $primary-color;
-
+  background-color: #ebf9f6;
+  margin: 2px;
+  color: $primary-color;
 }
