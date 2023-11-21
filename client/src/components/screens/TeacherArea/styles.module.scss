@@ -1,0 +1,18 @@
+@import "../../../assets/styles/variables";
+
+.wrapper {
+    margin: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.title {
+    color: $dark-color;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 120%;
+}
