@@ -1,0 +1,32 @@
+@import "../../../../assets/styles/variables";
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 95%;
+    border-bottom: 2px solid $border-color;
+    padding: 10px;
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 32px;
+    }
+}
+
+.text {
+    color: $dark-color;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.select {
+    border-radius: 6px;
+    border: 1px solid $dark-color;
+    height: 36px;
+    padding: 4px;
+    cursor: pointer;
+    margin-right: 35px;
+    background-color: $light-color;
+}
