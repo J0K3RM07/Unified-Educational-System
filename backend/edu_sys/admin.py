@@ -44,3 +44,8 @@ class SubjectAdmin(admin.ModelAdmin):
     list_display = (
         "name",
     )
+
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    pass

@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, AbstractBaseUser, PermissionsMixin
 from phonenumber_field.modelfields import PhoneNumberField
 from martor.models import MartorField
 
@@ -16,42 +16,12 @@ class User(AbstractUser):
     phone_number = PhoneNumberField(blank=True, null=True)
     about = MartorField(verbose_name='About', blank=True, null=True)
     achievement = models.ForeignKey('Achievement', on_delete=models.RESTRICT, blank=True, null=True)
-
-    def __str__(self):
-        return self.username
-
-    class Meta:
-        abstract = False
-
-
-class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     institution = models.ForeignKey("Institution", on_delete=models.RESTRICT, blank=True, null=True)
-    parent = models.ManyToManyField("Parent")
+    parent = models.ManyToManyField("Parent", blank=True, default=None)
     subject = models.ForeignKey("Subject", on_delete=models.RESTRICT)
-
-    def __str__(self):
-        return self.username
-
-
-class Teacher(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT)
-
-    def __str__(self):
-        return self.username
-
-
-class Admin(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    post = models.ForeignKey("Post", on_delete=models.RESTRICT)
-
-    def __str__(self):
-        return self.username
-
-
-class Parent(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    post = models.ForeignKey("Post", on_delete=models.RESTRICT, blank=True)
+    role = models.CharField(max_length=100)
 
     def __str__(self):
         return self.username
