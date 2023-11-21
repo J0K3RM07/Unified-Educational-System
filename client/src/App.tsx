@@ -14,18 +14,17 @@ export function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/auth" element={<AuthorizationPage />} />
         <Route path="/reg" element={<RegistrationPage />} />
         <Route path="/personal-area" element={<PersonalAreaPage />} />
         <Route path="/teacher-area/:name" element={<TeacherAreaPage />} />
         <Route path="/schedule" element={<SchedulePage />} />
-        <Route path='/admin-area/:name' element={<AdminAreaPage />} />
+        <Route path="/admin-area/:name" element={<AdminAreaPage />} />
         <Route path="/rating" element={<RatingPage />} />
 
-
         <Route path="/*" element={<NotFoundPage />} />
-			{/* <Route path="/events" element={<EventsPage />} />
+        {/* <Route path="/events" element={<EventsPage />} />
 			<Route path="/events/:id" element={<EventPage />} />
 			<Route path="/courses" element={<CoursesPage />} />
 			<Route path="/courses/:id" element={<Course />} />

@@ -1,70 +1,70 @@
 @import "../../../../assets/styles/variables";
 
 .wrapper {
-    border-radius: 16px;
-    border: 3px solid $border-color;
-    width: 100%;
-    padding: 10px 40px 10px 40px;
+  border-radius: 16px;
+  border: 3px solid $border-color;
+  width: 100%;
+  padding: 10px 40px 10px 40px;
 }
 
 .title {
-    color: $dark-color;
-    font-size: $font-size-h3;
-    font-weight: 500;
-    line-height: 135%;
-    margin-bottom: 30px;
+  color: $dark-color;
+  font-size: $font-size-h3;
+  font-weight: 500;
+  line-height: 135%;
+  margin-bottom: 30px;
 }
 
 .table {
-    width: 100%;
+  width: 100%;
 
-    &_header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 25px;
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
 
-        &__text {
-            color: $gray-color;
-            font-size: $font-size-h3;
-            font-weight: 500;
-        }
+    &__text {
+      color: $gray-color;
+      font-size: $font-size-h3;
+      font-weight: 500;
     }
+  }
 }
 
 .name {
-    margin: 0 135px 0 135px;
+  margin: 0 135px 0 135px;
 }
 
 .button {
-    margin-left: 90%;
+  margin-left: 90%;
 }
 
 .item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    border-bottom: 2px solid $border-color;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-bottom: 2px solid $border-color;
+  padding: 10px;
 
-    &:last-child {
-        border-bottom: none;
-        margin-bottom: 32px;
-    }
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 32px;
+  }
 }
 
 .text {
-    color: $dark-color;
-    font-size: $font-size-h3;
-    font-weight: 500;
+  color: $dark-color;
+  font-size: $font-size-h3;
+  font-weight: 500;
 }
 
 .select {
-    border-radius: 6px;
-    border: 1px solid $dark-color;
-    height: 36px;
-    padding: 4px;
-    cursor: pointer;
-    background-color: $light-color;
-    font-size: $font-size-small;
+  border-radius: 6px;
+  border: 1px solid $dark-color;
+  height: 36px;
+  padding: 4px;
+  cursor: pointer;
+  background-color: $light-color;
+  font-size: $font-size-small;
 }
