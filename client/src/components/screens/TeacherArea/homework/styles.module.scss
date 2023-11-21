@@ -1,0 +1,52 @@
+@import "../../../../assets/styles/variables";
+
+.homework {
+    border-radius: 16px;
+    border: 3px solid $border-color;
+    width: 100%;
+    padding: 10px 40px 10px 40px;
+
+    &_title {
+        color: $dark-color;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 135%;
+        margin-bottom: 30px;
+    }
+
+    &_textarea {
+        width: 45%;
+
+        &__item {
+            margin-bottom: 32px;
+            height: 84px;
+        }
+    }
+
+    &_download {
+        width: 45%;
+
+        &__text {
+            margin-left: 30px;
+        }
+
+        &__area {
+            margin-top: 12px;
+            height: 80%;
+            background-image: url("../../../../assets/imgs/teach/download.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+
+        }
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    margin-left: 90%;
+}

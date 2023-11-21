@@ -1,0 +1,43 @@
+@import "../../../assets/styles/variables";
+
+.error {
+    min-height: calc(100vh - 250px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    &_title {
+        color: $dark-color;
+        font-size: 100px;
+        font-weight: 700;
+    }
+
+    &_box {
+        &__text {
+            color: $dark-color;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        &__email {
+            font-weight: 0;
+        }
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 265px;
+        height: 318px;
+        top: 200px;
+        right: 140px;
+        background-image: url('../../../assets/imgs/error/error.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+}

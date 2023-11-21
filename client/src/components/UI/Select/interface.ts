@@ -5,7 +5,7 @@ export interface IOption {
 
 export interface IProps {
   options: IOption[];
-  value: string;
-  onChange: () => void;
+  value?: string;
+  onChange?: () => void;
   className: string;
 }

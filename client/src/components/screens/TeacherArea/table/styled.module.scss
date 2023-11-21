@@ -1,0 +1,39 @@
+@import "../../../../assets/styles/variables";
+
+.wrapper {
+    border-radius: 16px;
+    border: 3px solid $border-color;
+    width: 100%;
+    padding: 10px 40px 10px 40px;
+}
+
+.title {
+    color: $dark-color;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 135%;
+    margin-bottom: 30px;
+}
+
+.table {
+    &_header {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin-bottom: 25px;
+
+        &__text {
+            color: $gray-color;
+            font-size: 32px;
+            font-weight: 500;
+        }
+    }
+}
+
+.name {
+    margin: 0 267px 0 230px;
+}
+
+.button {
+    margin-left: 90%;
+}
