@@ -1,18 +1,21 @@
-import style from "./style.module.scss";
+import { FC } from "react";
 import classNames from "classnames";
+
 import { IProps } from "./interface";
 
-const Textarea = ({ id, className, label, ...attrs }: IProps) => {
-  const clases = classNames(style.textarea, className);
+import style from "./style.module.scss";
+
+const Textarea: FC<IProps> = ({ id, label, value, className, rows, ...attrs }) => {
+  const classes = classNames(style.textarea, className);
 
   return (
     <div className={style.wrapper}>
       {label && (
-        <label className={style.label} htmlFor={id}>
+        <label htmlFor={id} className={style.label}>
           {label}
         </label>
       )}
-      <textarea name={id} id={id} className={clases} {...attrs}></textarea>
+      <textarea id={id} rows={rows} className={classes} {...attrs} defaultValue={value} />
     </div>
   );
 };

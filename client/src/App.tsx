@@ -6,19 +6,22 @@ import { PersonalAreaPage } from "./pages/PersonalAreaPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { TeacherAreaPage } from "./pages/TeacherAreaPage";
 import { SchedulePage } from "./pages/SchedulePage";
+import { MainPage } from "./pages/MainPage";
 
 export function App() {
   return (
     <>
       <Routes>
-        {/* <Route path='/' element={<MainPage />} /> */}
-        <Route path='/auth' element={<AuthorizationPage />} />
-        <Route path='/reg' element={<RegistrationPage />} />
-        <Route path='/personal-area' element={<PersonalAreaPage />} />
-        <Route path='/*' element={<NotFoundPage />} />
-        <Route path='/teacher-area/:name' element={<TeacherAreaPage />} />
+        <Route path='/' element={<MainPage />} />
+        <Route path="/auth" element={<AuthorizationPage />} />
+        <Route path="/reg" element={<RegistrationPage />} />
+        <Route path="/personal-area" element={<PersonalAreaPage />} />
+        <Route path="/teacher-area/:name" element={<TeacherAreaPage />} />
         <Route path="/schedule" element={<SchedulePage />} />
-			{/* <Route path="/rating" element={<RatingPage />} />
+
+
+        <Route path="/*" element={<NotFoundPage />} />
+        {/* <Route path="/rating" element={<RatingPage />} />
 			<Route path="/events" element={<EventsPage />} />
 			<Route path="/events/:id" element={<EventPage />} />
 			<Route path="/courses" element={<CoursesPage />} />

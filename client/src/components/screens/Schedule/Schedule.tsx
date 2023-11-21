@@ -24,9 +24,13 @@ export const Schedule: React.FC = () => {
     ];
 
     const dates: IOption[] = [
-        {label: "01/01/2023", value: "01/01/2023"},
-        {label: "01/02/2023", value: "01/02/2023"},
-        {label: "01/03/2023", value: "01/03/2023"},
+        {label: "понедельник", value: "monday"},
+        {label: "вторник", value: "tuesday"},
+        {label: "среда", value: "wednesday"},
+        {label: "четверг", value: "thursday"},
+        {label: "пятница", value: "friday"},
+        {label: "суббота", value: "saturday"},
+        {label: "воскресенье", value: "sunday"},
     ];
 
     const handleChange = (
@@ -55,7 +59,7 @@ export const Schedule: React.FC = () => {
                         />
                     </li>
                     <li>
-                        <span className={styles.filterText}>Группа:</span>
+                        <span className={styles.filterText}>Класс:</span>
                         <Select
                             className={styles.filter}
                             options={groups}
