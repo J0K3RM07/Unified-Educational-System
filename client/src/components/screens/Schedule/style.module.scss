@@ -1,0 +1,64 @@
+@import "../../../assets/styles/variables";
+
+.content {
+    padding: 64px 0 40px;
+}
+
+.heading {
+    margin-bottom: 16px;
+}
+
+.filters {
+    margin-bottom: 16px;
+
+    display: flex;
+    column-gap: 24px;
+    row-gap: 12px;
+}
+
+.filterText {
+    margin-right: 4px;
+
+    font-size: $font-size;
+}
+
+.filters {
+    font-size: $font-size-small;
+}
+
+.schedulesBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.title {
+    text-align: center;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.schedules {
+    width: 140px;
+}
+
+.scheduleOnDate {
+    padding: 16px 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    border: $gray-color 1px solid;
+    border-radius: 6px;
+}
+
+.time, .lesson, .teacher, .auditorium {
+    font-size: $font-size-small;
+}
