@@ -1,10 +1,17 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from phonenumber_field.modelfields import PhoneNumberField
 from martor.models import MartorField
 
 
-class User(AbstractUser):
+class User(AbstractUser, PermissionsMixin):
+    USER_ROLES = [
+        ('student', 'student'),
+        ('teacher', 'teacher'),
+        ('parent', 'parent'),
+        ('admin', 'admin'),
+    ]
+
     profile_pic = models.ImageField(
         verbose_name='Picture',
         upload_to='user/images/',
@@ -16,45 +23,31 @@ class User(AbstractUser):
     phone_number = PhoneNumberField(blank=True, null=True)
     about = MartorField(verbose_name='About', blank=True, null=True)
     achievement = models.ForeignKey('Achievement', on_delete=models.RESTRICT, blank=True, null=True)
-
-    def __str__(self):
-        return self.username
-
-    class Meta:
-        abstract = False
-
-
-class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     institution = models.ForeignKey("Institution", on_delete=models.RESTRICT, blank=True, null=True)
-    parent = models.ManyToManyField("Parent")
-    subject = models.ForeignKey("Subject", on_delete=models.RESTRICT)
+    subject = models.ForeignKey("Subject", on_delete=models.RESTRICT, blank=True, null=True)
+    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT, blank=True, null=True)
+    post = models.ForeignKey("Post", on_delete=models.RESTRICT, blank=True, null=True)
+    role = models.CharField(
+        verbose_name='Роль',
+        max_length=15,
+        choices=USER_ROLES,
+        default='student',
+    )
 
     def __str__(self):
         return self.username
 
+    @property
+    def is_teacher(self):
+        return self.role == 'teacher'
 
-class Teacher(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    lesson = models.ForeignKey("Lesson", on_delete=models.RESTRICT)
+    @property
+    def is_parent(self):
+        return self.role == 'parent'
 
-    def __str__(self):
-        return self.username
-
-
-class Admin(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    post = models.ForeignKey("Post", on_delete=models.RESTRICT)
-
-    def __str__(self):
-        return self.username
-
-
-class Parent(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.username
+    @property
+    def is_admin(self):
+        return self.role == 'admin'
 
 
 class Achievement(models.Model):
@@ -78,7 +71,7 @@ class Lesson(models.Model):
 class Rating(models.Model):
     rating = models.CharField(verbose_name='Rating', max_length=3)
     date = models.DateTimeField(verbose_name='Date', auto_now_add=True)
-    teacher = models.OneToOneField("Teacher", on_delete=models.RESTRICT)
+    teacher = models.OneToOneField("User", on_delete=models.RESTRICT)
 
 
 class Institution(models.Model):
