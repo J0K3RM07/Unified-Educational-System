@@ -1,3 +1,85 @@
-.personal {
-    padding: 72px 120px 40px;
+@import "../../../assets/styles/variables";
+
+.personalBox {
+    padding: 64px 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
+
+.personal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatarBox {
+    min-width: 40vw;
+    padding: 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid $gray-color;
+    border-radius: 16px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input {
+    width: 380px;
+}
+
+.aboutBox {
+    padding: 16px 32px;
+    border: 1px solid $gray-color;
+    border-radius: 16px;
+}
+
+.about {
+    margin-top: 12px;
+    font-size: $font-size;
+    line-height: 22px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schools, .benefits {
+    width: 32vw;
+    padding: 28px 32px;
+
+    border: $gray-color 1px solid;
+    border-radius: 16px;
+}
+
+.schoolsBox, .benefitsBox {
+    margin-top: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shool, .benefit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shoolDescr, .benefitDescr {
+    width: 25vw;
+}
+
+.descr {
+    font-size: $font-size-small;
+}
+
+.changeBtn {
+    cursor: pointer;
+}
+

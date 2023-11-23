@@ -1,6 +1,8 @@
+@import "../../../../assets/styles/variables";
+
 .subtitle {
-    color: var(--accent-color);
-    font-size: 32px;
+    color: $dark-color;
+    font-size: $font-size-h2;
     font-weight: 400;
     line-height: 100%;
 }
