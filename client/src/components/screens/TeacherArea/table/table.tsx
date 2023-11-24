@@ -7,7 +7,7 @@ import useFetch from "../../../../hooks/useFetch";
 import styles from "./styled.module.scss";
 
 export const Table = ({ filter }: IProps) => {
-  let { data } = useFetch("http://localhost:8000/students");
+  const { data } = useFetch("http://localhost:8000/students");
 
   console.log(data);
 
