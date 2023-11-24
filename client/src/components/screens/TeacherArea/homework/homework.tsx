@@ -1,6 +1,8 @@
 import Textarea from "../../../UI/Textarea/Textarea";
 import Button from "../../../UI/Button/Button";
 
+import download from "../../../../assets/imgs/teach/download.png";
+
 import styles from "./styles.module.scss";
 
 export const Homework = () => {
@@ -20,14 +22,14 @@ export const Homework = () => {
             className={styles.homework_textarea__item}
           />
         </div>
-        <div className={styles.homework_download}>
-          <p className={styles.homework_download__text}>
-            Загрузите фото- и видеоматериалы
-          </p>
-          <div className={styles.homework_download__area} />
+        <div className={styles.homework__download}>
+          <img src={download} />
+          <button className={styles.button}>Кликните здесь</button>
+          или перетащите файл
+          <p> PNG, JPG, MP4, AVI</p>
         </div>
       </div>
-      <Button children={"Сохранить"} className={styles.button} />
+      <Button children={"Сохранить"} className={styles.save} />
     </div>
   );
 };
