@@ -8,14 +8,15 @@
 
     &_title {
         color: $dark-color;
-        font-size: 32px;
+        font-size: $font-size-h3;
+        ;
         font-weight: 500;
         line-height: 135%;
         margin-bottom: 30px;
     }
 
     &_textarea {
-        width: 45%;
+        width: 80%;
 
         &__item {
             margin-bottom: 32px;
@@ -23,30 +24,31 @@
         }
     }
 
-    &_download {
-        width: 45%;
-
-        &__text {
-            margin-left: 30px;
-        }
-
-        &__area {
-            margin-top: 12px;
-            height: 80%;
-            background-image: url("../../../../assets/imgs/teach/download.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: auto;
-
-        }
+    &__download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #EBF9F6;
+        border-radius: 6px;
+        border: 1px dashed $dark-color;
+        font-size: $font-size;
     }
 }
 
 .content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-bottom: 30px;
+}
+
+.save {
+    margin-left: 90%;
 }
 
 .button {
-    margin-left: 90%;
+    background-color: #EBF9F6;
+    margin: 2px;
+    color: $primary-color;
+
 }
