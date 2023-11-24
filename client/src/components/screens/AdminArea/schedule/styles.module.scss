@@ -1,0 +1,51 @@
+@import "../../../../assets/styles/variables";
+
+.schedule {
+    border-radius: 16px;
+    border: 1px solid $gray-color;
+    padding: 33px 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.item {
+    border-right: 1px solid $gray-color;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+        border: none;
+    }
+
+    &_title {
+        color: $dark-color;
+        font-size: $font-size-h3;
+        font-weight: 500;
+        text-align: center;
+        padding: 5px
+    }
+
+    &_text {
+        color: $dark-color;
+        font-size: $font-size-small;
+        text-align: center;
+    }
+}
+
+.select {
+    border-radius: 6px;
+    border: 1px solid $dark-color;
+    height: 36px;
+    padding: 4px;
+    cursor: pointer;
+    background-color: $light-color;
+}
+
+.button {
+    margin-left: 90%;
+}
