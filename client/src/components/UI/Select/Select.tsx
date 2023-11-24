@@ -8,7 +8,10 @@ const Select = ({ options, value, onChange, className }: IProps) => {
   return (
     <select className={classes} value={value} onChange={onChange}>
       {options.map((option) => (
-        <option key={option.value} value={option.value}>
+        <option
+          key={option.value}
+          value={option.value}
+          className={style.options}>
           {option.label}
         </option>
       ))}
