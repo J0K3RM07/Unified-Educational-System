@@ -1,0 +1,28 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "name": "Иванов Иван Иванович",
+            "group": "group1",
+            "course": "Сольфеджио",
+            "finding": "",
+            "options": ""
+        },
+        {
+            "id": 2,
+            "name": "Петров Алексей Иванович",
+            "group": "group1",
+            "course": "Сольфеджио",
+            "finding": "",
+            "options": ""
+        },
+        {
+            "id": 3,
+            "name": "Семенов Петр Сергеевич",
+            "group": "group1",
+            "course": "Сольфеджио",
+            "finding": "",
+            "options": ""
+        }
+    ]
+}
