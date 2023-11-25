@@ -1,7 +1,7 @@
 @import "../../../assets/styles/variables";
 
 .content {
-    padding: 64px 0 40px;
+    padding: 32px 0 24px;
 }
 
 .heading {
@@ -14,16 +14,13 @@
     display: flex;
     column-gap: 24px;
     row-gap: 12px;
+    font-size: $font-size-small;
 }
 
 .filterText {
     margin-right: 4px;
 
     font-size: $font-size;
-}
-
-.filters {
-    font-size: $font-size-small;
 }
 
 .schedulesBox {

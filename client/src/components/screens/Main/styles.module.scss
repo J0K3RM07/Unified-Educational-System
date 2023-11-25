@@ -1,0 +1,52 @@
+@import "../../../assets/styles/variables";
+
+.mainBox {
+    margin: 32px 0 24px;
+}
+
+.heading {
+    margin-bottom: 12px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 24px;
+}
+
+.descr {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    font-size: $font-size-small;
+}
+
+.hr {
+    width: calc(1360px - 60px);
+    height: 2px;
+    margin-bottom: 24px;
+    
+    background-color: $gray-color;
+}
+
+.eventBox {
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.eventsTitle {
+    margin-bottom: 12px;
+}
+
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.allEvents {
+    width: fit-content;
+}

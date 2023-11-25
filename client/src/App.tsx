@@ -8,6 +8,7 @@ import { TeacherAreaPage } from "./pages/TeacherAreaPage";
 import { AdminAreaPage } from "./pages/AdminAreaPage";
 import { SchedulePage } from "./pages/SchedulePage";
 import { MainPage } from "./pages/MainPage";
+import { RatingPage } from "./pages/RatingPage";
 
 export function App() {
   return (
@@ -20,11 +21,11 @@ export function App() {
         <Route path="/teacher-area/:name" element={<TeacherAreaPage />} />
         <Route path="/schedule" element={<SchedulePage />} />
         <Route path='/admin-area/:name' element={<AdminAreaPage />} />
+        <Route path="/rating" element={<RatingPage />} />
 
 
         <Route path="/*" element={<NotFoundPage />} />
-        {/* <Route path="/rating" element={<RatingPage />} />
-			<Route path="/events" element={<EventsPage />} />
+			{/* <Route path="/events" element={<EventsPage />} />
 			<Route path="/events/:id" element={<EventPage />} />
 			<Route path="/courses" element={<CoursesPage />} />
 			<Route path="/courses/:id" element={<Course />} />

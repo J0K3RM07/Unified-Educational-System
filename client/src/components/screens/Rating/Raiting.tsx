@@ -1,12 +1,13 @@
 import { useState } from "react";
+
 import Select from "../../UI/Select/Select";
 import Heading from "../../UI/Titles/Heading/Heading";
-import Subtitle from "../../UI/Titles/Subtitle/Subtitle";
 import { Layout } from "../../layout/Layout/Layout";
 import { IOption } from "../../../shared/interface";
-import styles from "./style.module.scss";
 
-export const Schedule: React.FC = () => {
+import styles from "./styles.module.scss";
+
+export const Rating = () => {
     const [selectedSchool, setSelectedSchool] = useState<IOption>({ value: '', label: '' });
     const [selectedGroup, setSelectedGroup] = useState<IOption>({ value: '', label: '' });
     const [selectedDate, setSelectedDate] = useState<IOption>({ value: '', label: '' });
@@ -44,10 +45,12 @@ export const Schedule: React.FC = () => {
         setSelected(selectedOption || { value: '', label: '' });
     };
 
+
     return (
         <Layout>
-            <div className={styles.content}>
-                <Heading className={styles.heading}>Расписание</Heading>
+            <div className={styles.ratingBox}>
+                <Heading children="Рейтинг" />
+
                 <ul className={styles.filters}>
                     <li>
                         <span className={styles.filterText}>Школа:</span>
@@ -78,43 +81,30 @@ export const Schedule: React.FC = () => {
                     </li>
                 </ul>
 
-
-                <ul className={styles.schedulesBox}>
-                    <li className={styles.schedules}>
-                        <ul className={styles.scheduleOnDate}>
-                            <Subtitle children="03.03" className={styles.title}/>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li className={styles.schedules}>
-                        <ul className={styles.scheduleOnDate}>
-                            <Subtitle children="03.03" className={styles.title}/>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th className={styles.thead}>Предмет</th>
+                            <th className={styles.thead}>Оценки</th>
+                            <th className={styles.thead}>Кол-во пропусков </th>
+                            <th className={styles.thead}>Итоговая оценка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className={styles.trow}>
+                            <td className={styles.td}>Хор</td>
+                            <td className={styles.td}>4 4 4 5 5 3 4 5 </td>
+                            <td className={styles.td}>2 </td>
+                            <td className={styles.td}>4</td>
+                        </tr>
+                        <tr className={styles.trow}>
+                            <td className={styles.td}>Сольфеджио</td>
+                            <td className={styles.td}>5 5 5 5 5 5 5 </td>
+                            <td className={styles.td}>0</td>
+                            <td className={styles.td}>5</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </Layout>
     );
