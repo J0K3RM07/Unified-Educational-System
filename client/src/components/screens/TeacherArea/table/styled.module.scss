@@ -22,6 +22,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    &_header {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 25px;
 
     &__text {
       color: $gray-color;
