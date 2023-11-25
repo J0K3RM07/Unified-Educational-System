@@ -22,7 +22,6 @@ export function App() {
         <Route path="/teacher-area/:name" element={<TeacherAreaPage />} />
         <Route path="/schedule" element={<SchedulePage />} />
         <Route path="/admin-area/:name" element={<AdminAreaPage />} />
-        <Route path="/admin-area/:name" element={<AdminAreaPage />} />
         <Route path="/rating" element={<RatingPage />} />
         <Route path="/event/:id" element={<EventPage />} />
 
