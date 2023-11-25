@@ -1,0 +1,23 @@
+@import "../../../assets/styles/variables";
+
+.eventBox {
+    margin: 32px 0 24px;
+}
+
+.heading {
+    margin-bottom: 24px;
+}
+
+.content {
+    display: flex;
+    gap: 24px;
+}
+
+.date {
+    color: $gray-color;
+    font-size: $font-size-small;
+}
+
+.descr {
+    font-size: $font-size;
+}
