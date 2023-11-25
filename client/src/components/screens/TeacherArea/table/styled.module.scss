@@ -20,7 +20,7 @@
 
     &_header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: 25px;
 
         &__text {
@@ -42,7 +42,7 @@
 .item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 40px;
     border-bottom: 2px solid $border-color;
     padding: 10px;

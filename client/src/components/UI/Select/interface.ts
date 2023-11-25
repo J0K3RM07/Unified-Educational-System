@@ -6,6 +6,6 @@ export interface IOption {
 export interface IProps {
   options: IOption[];
   value?: string;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   className: string;
 }
