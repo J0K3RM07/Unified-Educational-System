@@ -1,0 +1,33 @@
+@import "../../../../assets/styles/variables";
+
+.event {
+    width: 280px;
+    padding: 12px;
+
+    border: 2px solid $gray-color;
+    border-radius: 16px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: $font-size;
+}
+
+.date {
+    font-size: $font-size-small;
+}
+
+.imgBox {
+    margin-bottom: 12px;
+}
+
+.img {
+    width: 100%;
+}
