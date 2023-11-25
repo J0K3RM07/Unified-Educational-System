@@ -2,13 +2,18 @@ import Textarea from "../../../UI/Textarea/Textarea";
 import Button from "../../../UI/Button/Button";
 
 import download from "../../../../assets/imgs/teach/download.png";
+import { IProps } from "./interface";
 
 import styles from "./styles.module.scss";
 
-export const Homework = () => {
+export const Homework = ({ filter }: IProps) => {
   return (
     <div className={styles.homework}>
-      <p className={styles.homework_title}>Группа 21а Сольфеджио 04.11.23</p>
+      <p className={styles.homework_title}>
+        {filter.day && filter.group && filter.lesson !== ""
+          ? `Класс: ${filter.group} Дисциплина: ${filter.lesson} День: ${filter.day}`
+          : ""}
+      </p>
       <div className={styles.content}>
         <div className={styles.homework_textarea}>
           <Textarea

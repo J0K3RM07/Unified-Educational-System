@@ -31,7 +31,8 @@ export const TeacherArea = () => {
         )}
 
         <Filter change={setFilter} />
-        {pageName === "homework" ? <Homework /> : <Table filter={filter} />}
+        {pageName === "rating" ? <Table filter={filter} /> : ""}
+        {pageName === "homework" ? <Homework filter={filter} /> : ""}
       </div>
     </Layout>
   );

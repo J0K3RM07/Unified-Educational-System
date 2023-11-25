@@ -6,6 +6,7 @@ import { PersonalAreaPage } from "./pages/PersonalAreaPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { TeacherAreaPage } from "./pages/TeacherAreaPage";
 import { AdminAreaPage } from "./pages/AdminAreaPage";
+import { StudentAreaPage } from "./pages/StudentAreaPage";
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
         <Route path='/error' element={<NotFoundPage />} />
         <Route path='/teacher-area/:name' element={<TeacherAreaPage />} />
         <Route path='/admin-area/:name' element={<AdminAreaPage />} />
+        <Route path='/student-area' element={<StudentAreaPage />} />
         {/* <Route path="/schedule" element={<Schedule />} />
 			<Route path="/rating" element={<RatingPage />} />
 			<Route path="/events" element={<EventsPage />} />

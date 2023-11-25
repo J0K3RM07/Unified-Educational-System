@@ -9,8 +9,13 @@ export const Filter = ({ change }: IProps) => {
   const [filter, setFilter] = useState({ group: "", lesson: "", day: "" });
 
   const groups = [
-    { value: "21", label: "21" },
-    { value: "22", label: "22" },
+    { value: "1", label: "1" },
+    { value: "2", label: "2" },
+    { value: "3", label: "3" },
+    { value: "4", label: "4" },
+    { value: "5", label: "5" },
+    { value: "6", label: "6" },
+    { value: "7", label: "7" },
   ];
 
   const lessons = [
@@ -48,7 +53,7 @@ export const Filter = ({ change }: IProps) => {
         </div>
       </div>
       <div className={styles.filter_item}>
-        <p className={styles.filter_item__title}>Группа</p>
+        <p className={styles.filter_item__title}>Класс</p>
         <div className={styles.filter_item__select}>
           <p>Название группы</p>
           <Select
