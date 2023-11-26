@@ -1,11 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
-
-
-
-
-
-=======
 from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from phonenumber_field.modelfields import PhoneNumberField
 from martor.models import MartorField
@@ -124,4 +117,3 @@ class Post(models.Model):
         null=True,
     )
     text = MartorField(verbose_name='Text')
->>>>>>> develop

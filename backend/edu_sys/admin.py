@@ -1,8 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
-
-# Register your models here.
-=======
 from django.db import models
 from martor.widgets import AdminMartorWidget
 
@@ -57,4 +53,3 @@ class UserAdmin(admin.ModelAdmin):
         "role",
     )
     list_filter = ("role",)
->>>>>>> develop
