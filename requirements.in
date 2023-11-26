@@ -5,4 +5,12 @@ Pillow
 djangorestframework
 martor
 python-dotenv
+<<<<<<< HEAD
 gunicorn
+=======
+gunicorn
+drf_spectacular
+django-phonenumber-field[phonenumbers]
+psycopg2-binary
+djoser
+>>>>>>> develop

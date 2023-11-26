@@ -9,7 +9,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='django-insecure-123')
 
+<<<<<<< HEAD
 DEBUG = os.getenv('DEBUG', default=False) == 'True'
+=======
+DEBUG = True #os.getenv('DEBUG', default=False) == 'True'
+>>>>>>> develop
 
 ALLOWED_HOSTS = os.getenv(
     'ALLOWED_HOSTS',
@@ -23,12 +27,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
 
     'rest_framework',
     'rest_framework.authtoken',
     'martor',
 
     'edu_sys.apps.EduSysConfig',
+=======
+    'rest_framework',
+    'rest_framework.authtoken',
+    "djoser",
+    "drf_spectacular",
+    'martor',
+    'edu_sys.apps.EduSysConfig',
+    'api.apps.ApiConfig',
+    "phonenumber_field",
+>>>>>>> develop
 ]
 
 MIDDLEWARE = [
@@ -107,6 +122,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
+=======
+AUTH_USER_MODEL = 'edu_sys.User'
+
+>>>>>>> develop
 ####################################
     ##  MARTOR  CONFIGURATION ##
 ####################################
@@ -159,3 +179,28 @@ ALLOWED_HTML_ATTRIBUTES = [
     "scope", "src", "style", "title", "type", "width"
 ]
 ####################################
+<<<<<<< HEAD
+=======
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ],
+}
+
+DJOSER = {
+    "HIDE_USERS": False,
+    "LOGIN_FIELD": "username",
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Творчество',
+    'DESCRIPTION': 'Единая образовательная среда Творчество',
+    'VERSION': 'v1.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
+>>>>>>> develop
