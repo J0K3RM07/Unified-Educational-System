@@ -66,12 +66,15 @@ class Lesson(models.Model):
     date = models.DateTimeField('Date', auto_now_add=True)
     classroom = models.CharField(verbose_name='Classroom', max_length=10)
     rating = models.ForeignKey("Rating", on_delete=models.RESTRICT)
+    teacher = models.OneToOneField("User", on_delete=models.RESTRICT)
+    user = models.ForeignKey("User", on_delete=models.CASCADE)
 
 
 class Rating(models.Model):
     rating = models.CharField(verbose_name='Rating', max_length=3)
     date = models.DateTimeField(verbose_name='Date', auto_now_add=True)
     teacher = models.OneToOneField("User", on_delete=models.RESTRICT)
+    user = models.ForeignKey("User", on_delete=models.CASCADE)
 
 
 class Institution(models.Model):
