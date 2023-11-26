@@ -3,8 +3,12 @@ import { Layout } from "../../layout/Layout/Layout";
 import pic from "../../../assets/imgs/main/mainPic.svg"
 
 import styles from "./styles.module.scss";
+import { useParams } from "react-router-dom";
 
 export const Event = () => {
+    const param = useParams()
+    console.log(param);
+
     return (
         <Layout>
             <div className={styles.eventBox}>
