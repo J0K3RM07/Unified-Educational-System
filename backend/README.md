@@ -46,3 +46,9 @@ http://127.0.0.1:8000/admin/
 ```bash
 http://127.0.0.1:8000/api/docs/
 ```
+
+9. Регистрация пользователя:
+
+```bash
+python3 manage.py createsuperuser
+```
