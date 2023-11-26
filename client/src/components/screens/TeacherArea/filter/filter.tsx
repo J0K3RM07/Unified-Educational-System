@@ -53,7 +53,7 @@ export const Filter = ({ change }: IProps) => {
         </div>
       </div>
       <div className={styles.filter_item}>
-        <p className={styles.filter_item__title}>Класс</p>
+        <p className={styles.filter_item__title}>Группа</p>
         <div className={styles.filter_item__select}>
           <p>Название группы</p>
           <Select

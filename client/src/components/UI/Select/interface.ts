@@ -4,8 +4,9 @@ export interface IOption {
 }
 
 export interface IProps {
+  id?: string;
   options: IOption[];
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  className: string;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  className?: string;
 }

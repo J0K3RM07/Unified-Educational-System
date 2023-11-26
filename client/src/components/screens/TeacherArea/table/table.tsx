@@ -26,12 +26,15 @@ export const Table = ({ filter }: IProps) => {
     { value: "5", label: "5" },
   ];
 
+  console.log(data);
+
   return (
     <div className={styles.wrapper}>
       <p className={styles.title}>
         {filter.day && filter.group && filter.lesson !== ""
           ? `Класс: ${filter.group} Дисциплина: ${filter.lesson} День: ${filter.day}`
           : ""}
+        Группа {filter.group} {filter.lesson} {filter.day}
       </p>
       <table className={styles.table}>
         <thead>
@@ -53,6 +56,41 @@ export const Table = ({ filter }: IProps) => {
               </td>
             </tr>
           ))}
+          <tr className={styles.item}>
+            <td className={styles.text}>1</td>
+            <td className={styles.text}>Петров Иван Александрович</td>
+            <td>
+              <Select options={options} className={styles.select} />
+            </td>
+          </tr>
+          <tr className={styles.item}>
+            <td className={styles.text}>1</td>
+            <td className={styles.text}>Петров Иван Александрович</td>
+            <td>
+              <Select options={options} className={styles.select} />
+            </td>
+          </tr>
+          <tr className={styles.item}>
+            <td className={styles.text}>1</td>
+            <td className={styles.text}>Петров Иван Александрович</td>
+            <td>
+              <Select options={options} className={styles.select} />
+            </td>
+          </tr>
+          <tr className={styles.item}>
+            <td className={styles.text}>1</td>
+            <td className={styles.text}>Петров Иван Александрович</td>
+            <td>
+              <Select options={options} className={styles.select} />
+            </td>
+          </tr>
+          <tr className={styles.item}>
+            <td className={styles.text}>1</td>
+            <td className={styles.text}>Петров Иван Александрович</td>
+            <td>
+              <Select options={options} className={styles.select} />
+            </td>
+          </tr>
         </tbody>
       </table>
       <Button children={"Сохранить"} className={styles.button} />
