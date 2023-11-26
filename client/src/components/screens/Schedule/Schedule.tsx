@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Select from "../../UI/Select/Select";
 import Heading from "../../UI/Titles/Heading/Heading";
-import Subtitle from "../../UI/Titles/Subtitle/Subtitle";
 import { Layout } from "../../layout/Layout/Layout";
 import { IOption } from "../../../shared/interface";
 import styles from "./style.module.scss";
@@ -78,43 +77,44 @@ export const Schedule: React.FC = () => {
                     </li>
                 </ul>
 
-
-                <ul className={styles.schedulesBox}>
-                    <li className={styles.schedules}>
-                        <ul className={styles.scheduleOnDate}>
-                            <Subtitle children="03.03" className={styles.title}/>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li className={styles.schedules}>
-                        <ul className={styles.scheduleOnDate}>
-                            <Subtitle children="03.03" className={styles.title}/>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                            <li className={styles.schedule}>
-                                <p className={styles.time}>15:00 - 16:00</p>
-                                <p className={styles.lesson}>Живопись</p>
-                                <p className={styles.teacher}>Петров Е. З.</p>
-                                <p className={styles.auditorium}>ауд. 2</p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <td className={styles.th}>День недели</td>
+                            <th className={styles.th}>Время</th >
+                            <th className={styles.th}>ФИО ученика</th >
+                            <th className={styles.th}>Класс</th >
+                            <th className={styles.th}>Предмет</th >
+                            <th className={styles.th}>№ Кабинета</th >
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className={styles.td}>Понедельник</td>
+                            <td className={styles.td}>9:15-9:55</td>
+                            <td className={styles.td}>Иванов И.И. </td>
+                            <td className={styles.td}>1 класс</td>
+                            <td className={styles.td}>специальность</td>
+                            <td className={styles.td}>208</td>
+                        </tr>
+                        <tr>
+                            <td className={styles.td}>Вторник</td>
+                            <td className={styles.td}>9:15-9:55</td>
+                            <td className={styles.td}>Иванов И.И. </td>
+                            <td className={styles.td}>1 класс</td>
+                            <td className={styles.td}>специальность</td>
+                            <td className={styles.td}>208</td>
+                        </tr>
+                        <tr>
+                            <td className={styles.td}>Среда</td>
+                            <td className={styles.td}>9:15-9:55</td>
+                            <td className={styles.td}>Иванов И.И. </td>
+                            <td className={styles.td}>1 класс</td>
+                            <td className={styles.td}>специальность</td>
+                            <td className={styles.td}>208</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </Layout>
     );

@@ -40,9 +40,12 @@ export const PersonalArea: FC = () => {
                                     className={styles.input}
                                     label="Телефон"
                                 />
+                                <Input 
+                                    className={styles.input}
+                                    label="Класс"
+                                />
                             </div>
                         </div>
-
                     </div>
 
                     <div className={styles.aboutBox}>
@@ -54,6 +57,7 @@ export const PersonalArea: FC = () => {
                         />
                     </div>
                 </div>
+
                 <div className={styles.wrapper}>
                     <div className={styles.schools}>
                         <div className={styles.wrapper}>

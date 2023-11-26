@@ -10,7 +10,6 @@ import event3 from "../../../assets/imgs/main/event3.svg"
 import event4 from "../../../assets/imgs/main/event4.svg"
 import Subtitle from "../../UI/Titles/Subtitle/Subtitle";
 import { Event } from "./Event/Event";
-import Button from "../../UI/Button/Button";
 
 export const Main = () => {
     return (
@@ -45,10 +44,6 @@ export const Main = () => {
                         <Event img={event4} id='4' title="Вечер классической музыки" date="16.09" />
                     </li>
                 </ul>
-                <Button 
-                    children="Все новости"
-                    className={styles.allEvents}
-                />
             </div>
 
         </Layout>

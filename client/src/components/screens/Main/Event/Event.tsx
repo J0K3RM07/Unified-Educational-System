@@ -1,4 +1,4 @@
-import Button from "../../../UI/Button/Button";
+import { Link } from "react-router-dom";
 
 import { EventProps } from "./interface";
 import styles from "./styles.module.scss";
@@ -13,9 +13,9 @@ export const Event = ({ title, date, img, id}: EventProps) => {
             <div className={styles.imgBox}>
                 <img className={styles.img} src={img} alt={title} />
             </div>
-            <Button
-                children="Посмотреть"
-            />
+            <Link className={styles.link} to={`/event/${id}`}>
+                Посмотреть
+            </Link>
         </div>
     );
 }
