@@ -1,0 +1,30 @@
+@import "../../../assets/styles/variables";
+
+.footer {
+    margin-top: auto;
+    min-height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: $dark-color;
+    box-shadow: 0 0 0 100vmax $dark-color;
+    clip-path: inset(0 -100vmax);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactsBox, .securityBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact, .security, .rights {
+    font-size: $font-size;
+    display: block;
+    color: $light-color;
+}

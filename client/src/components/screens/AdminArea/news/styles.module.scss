@@ -1,0 +1,78 @@
+@import "../../../../assets/styles/variables";
+
+.news {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid $gray-color;
+    padding: 33px 24px;
+    width: 100%;
+    gap: 30px;
+
+    &_content {
+        display: grid;
+        grid-template-columns: 33% 66%;
+        border-bottom: 1px solid $gray-color;
+        padding-bottom: 25px;
+
+        &__title {
+            font-size: $font-size-h3;
+            font-weight: 500;
+            line-height: 135%;
+        }
+
+        &__text {
+            color: #7C7C7C;
+            font-size: $font-size;
+            font-weight: 400;
+            line-height: 150%;
+            width: 50%;
+        }
+    }
+
+    &_media {
+        display: grid;
+        grid-template-columns: 33% 66%;
+
+        &__download {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #EBF9F6;
+            border-radius: 6px;
+            border: 1px dashed $dark-color;
+            height: 400px;
+            font-size: $font-size;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+.textarea {
+    height: 30%;
+    border-radius: 6px;
+    border: 1px solid $dark-color;
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.button {
+    background-color: #EBF9F6;
+    margin: 2px;
+    color: $primary-color;
+}
+
+.save {
+    margin-left: 90%;
+
+}

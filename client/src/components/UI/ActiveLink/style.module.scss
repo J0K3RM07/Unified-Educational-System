@@ -1,0 +1,31 @@
+.link {
+    width: fit-content;
+    color: var(--dark-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+
+    display: flex;
+    padding: 14px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+
+    border: 1px solid #C3DCE3;
+    border-radius: 10px;
+    background:  #C3DCE3;
+
+    transition: all ease-in .3s;
+}
+
+.link:focus {
+    color: var(--light-color);
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent2-color);
+}
+
+.link:hover {
+    color: var(--light-color);
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent2-color);
+}

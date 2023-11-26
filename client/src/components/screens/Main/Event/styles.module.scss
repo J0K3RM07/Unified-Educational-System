@@ -1,0 +1,66 @@
+@import "../../../../assets/styles/variables";
+
+.event {
+    width: 280px;
+    padding: 12px;
+
+    border: 2px solid $gray-color;
+    border-radius: 16px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: $font-size;
+}
+
+.date {
+    font-size: $font-size-small;
+}
+
+.imgBox {
+    margin-bottom: 12px;
+}
+
+.img {
+    width: 100%;
+}
+
+.link {
+    height: 36px;
+    
+    color: $light-color;
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 100%;
+
+    display: flex;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+
+    border-radius: 6px;
+    background:  $primary-color;
+    border: 1px solid $primary-color;
+
+    transition: all ease-in .3s;
+}
+
+.link:focus {
+    color: $dark-color;
+    border: 1px solid $primary-color-light;
+    background-color: $primary-color-light;
+}
+
+.link:hover {
+    color: $dark-color;
+    border: 1px solid $primary-color-light;
+    background-color: $primary-color-light;
+}

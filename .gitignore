@@ -73,7 +73,6 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
 * .idea
 .env
 .venv
@@ -85,3 +84,4 @@ venv.bak/
 static/
 db.sqlite3
 .vscode
+
