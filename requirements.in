@@ -6,3 +6,7 @@ djangorestframework
 martor
 python-dotenv
 gunicorn
+drf_spectacular
+django-phonenumber-field[phonenumbers]
+psycopg2-binary
+djoser
