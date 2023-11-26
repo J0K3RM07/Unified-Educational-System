@@ -23,6 +23,14 @@
             "course": "Сольфеджио",
             "finding": "",
             "options": ""
+        },
+        {
+            "id": 4,
+            "name": "Сергеев Илья Антонович",
+            "group": "group1",
+            "course": "Сольфеджио",
+            "finding": "",
+            "options": ""
         }
     ]
 }
