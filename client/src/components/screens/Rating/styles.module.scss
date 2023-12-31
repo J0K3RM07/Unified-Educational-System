@@ -1,0 +1,45 @@
+@import "../../../assets/styles/variables";
+
+.ratingBox {
+    margin: 32px 0 24px;
+}
+
+.filters {
+    margin-bottom: 16px;
+
+    display: flex;
+    column-gap: 24px;
+    row-gap: 12px;
+    font-size: $font-size-small;
+}
+
+.filterText {
+    margin-right: 4px;
+
+    font-size: $font-size;
+}
+
+/* Стили таблицы */
+.table {
+    text-decoration: none;
+    border-collapse:collapse;
+    width:100%;
+    text-align:center;
+}
+
+.thead{
+    font-weight:normal;
+    font-size: $font-size; 
+    color: $dark-color;
+    background-color:#e0dbdb;
+    border: 1px solid #000000;
+}
+
+.td {
+    white-space:pre-wrap;
+    padding:10px 5px;
+    line-height:13px;
+    vertical-align: middle;
+    font-size: $font-size; 
+    border: 1px solid #000000;
+}

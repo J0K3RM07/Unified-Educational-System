@@ -1,0 +1,12 @@
+asgiref
+Django
+sqlparse
+Pillow
+djangorestframework
+martor
+python-dotenv
+gunicorn
+drf_spectacular
+django-phonenumber-field[phonenumbers]
+psycopg2-binary
+djoser
